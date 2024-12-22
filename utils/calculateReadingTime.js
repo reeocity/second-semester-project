@@ -1,8 +1,6 @@
-const calculateReadingTime = (text) => {
-    const wordsPerMinute = 200;
-    const words = text.split(' ').length;
-    const time = Math.ceil(words / wordsPerMinute);
-    return `${time} min read` ;
-  };
-  
-  module.exports = calculateReadingTime;
+const calculateReadingTime = (body) => {
+  const words = body.split(/\s+/).length;
+  const wordsPerMinute = 200; 
+  return Math.ceil(words / wordsPerMinute); };
+
+module.exports = calculateReadingTime;
